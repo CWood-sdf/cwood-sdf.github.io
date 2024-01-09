@@ -26,7 +26,8 @@
       iframe.setAttribute("width", window.screen.width);
       iframe.setAttribute("height", window.screen.height);
       window.setTimeout(function () {
-        iframe.click();
+        let event = new Event("click", {});
+        iframe.dispatchEvent(event);
       }, 100);
     </script>
   </body>
