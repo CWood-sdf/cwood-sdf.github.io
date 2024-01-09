@@ -3,12 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <title>Document</title>
+    <style>
+      iframe {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
   </head>
   <body>
     <iframe
       width="560"
       height="315"
-      src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=3_5E7YS-DC8ztuNS&amp;controls=0"
+      src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=3_5E7YS-DC8ztuNS&amp;controls=0&autoplay=1"
       title="YouTube video player"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -17,8 +23,8 @@
     <script>
       let iframe = document.querySelector("iframe");
       iframe.setAttribute("allow", "autoplay");
-      iframe.setAttribute("width", document.body.clientWidth);
-      iframe.setAttribute("height", document.body.clientHeight);
+      iframe.setAttribute("width", window.screen.width);
+      iframe.setAttribute("height", window.screen.height);
     </script>
   </body>
 </html>
