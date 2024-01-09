@@ -20,15 +20,21 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
     ></iframe>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
     <script>
       let iframe = document.querySelector("iframe");
       iframe.setAttribute("allow", "autoplay");
       iframe.setAttribute("width", window.screen.width);
       iframe.setAttribute("height", window.screen.height);
       window.setTimeout(function () {
-        let event = new Event("click", {});
-        iframe.dispatchEvent(event);
-      }, 100);
+        // let event = new Event("click", {});
+        // iframe.dispatchEvent(event);
+        $("iframe").click();
+      }, 1000);
     </script>
   </body>
 </html>
