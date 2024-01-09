@@ -14,5 +14,11 @@
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen
     ></iframe>
+    <script>
+      let iframe = document.querySelector("iframe");
+      iframe.setAttribute("allow", "autoplay");
+      iframe.setAttribute("width", document.body.clientWidth);
+      iframe.setAttribute("height", document.body.clientHeight);
+    </script>
   </body>
 </html>
